@@ -4,7 +4,7 @@
 [core]
     autocrlf = input
     ignorecase = false
-    editor = mate --name 'Git Commit Message' -w -l 1
+    editor = mate -w -l 1
 [alias]
     co = checkout
     # Log display from screencast, with train tracks.
