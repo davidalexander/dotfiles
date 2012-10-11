@@ -2,9 +2,13 @@
     name = Your Name
     email = email@email.com
 [core]
-    autocrlf = input
+    excludesfile = ~/.gitignore_global
+    autocrlf = input # for linux and mac
+    #autocrlf = true # for windows
     ignorecase = false
     editor = mate -w -l 1
+# [receive]
+     # denyCurrentBranch = warn # allow pushing, just warn
 [alias]
     co = checkout
     # Log display from screencast, with train tracks.
