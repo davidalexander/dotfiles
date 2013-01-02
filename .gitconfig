@@ -6,7 +6,7 @@
     autocrlf = input # for linux and mac
     #autocrlf = true # for windows
     ignorecase = false
-    editor = mate -w -l 1
+    editor = subl -n -w
 # [receive]
      # denyCurrentBranch = warn # allow pushing, just warn
 [alias]
