@@ -13,5 +13,5 @@ alias duf='du -sk * | sort -n | while read size fname; do for unit in k M G T P 
 
 # use MAMP for cli php
 # http://stackoverflow.com/questions/4145667/how-to-override-the-path-of-php-to-use-the-mamp-path
-export MAMP_PHP=/Applications/MAMP/bin/php/php5.3.6/bin
-export PATH="$MAMP_PHP:$PATH"
+# export MAMP_PHP=/Applications/MAMP/bin/php/php5.3.6/bin
+# export PATH="$MAMP_PHP:$PATH"
