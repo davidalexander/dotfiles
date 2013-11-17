@@ -67,13 +67,13 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 
 # Add ssh config from dropbox
-ln -s ~/Dropbox/Backup/ssh/config ~/.ssh/config
+ln -s "~/Dropbox/Backup/ssh/config" "~/.ssh/config"
 
 # Add ST3 configs from dropbox
-rm -frv ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
-ln -s ~/Dropbox/Backup/Sublime\ Text\ 3/Installed\ Packages ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
-rm -frv ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
-ln -s ~/Dropbox/Backup/Sublime\ Text\ 3/Packages ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+rm -frv "~/Library/Application Support/Sublime Text 3/Installed Packages"
+ln -s "~/Dropbox/Backup/Sublime Text 3/Installed Packages" "~/Library/Application Support/Sublime Text 3/Installed Packages"
+rm -frv "~/Library/Application Support/Sublime Text 3/Packages"
+ln -s "~/Dropbox/Backup/Sublime Text 3/Packages" "~/Library/Application Support/Sublime Text 3/Packages"
 
 # Add ST3 to cmd line
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
