@@ -26,6 +26,10 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
+# Hide the Spotlight Menu Icon in OS X
+sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+killall SystemUIServer
+
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
@@ -52,10 +56,6 @@ ln -s "/Applications/MAMP/bin/php/php5.5.3/bin/php" /usr/local/bin/phpmamp
 
 # Add mysql to cmd line
 ln -s "/Applications/MAMP/Library/bin/mysql" /usr/local/bin/mysql
-
-# ssh-copy-id for OSX
-curl https://raw.github.com/beautifulcode/ssh-copy-id-for-OSX/master/ssh-copy-id.sh -o /usr/local/bin/ssh-copy-id
-chmod +x /usr/local/bin/ssh-copy-id
 
 # netz98 magerun CLI tools
 wget https://raw.github.com/netz98/n98-magerun/master/n98-magerun.phar -o /usr/local/bin/n98-magerun.phar
