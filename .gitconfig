@@ -17,7 +17,7 @@
     staged = diff --cached
     track = checkout -t
     ci = commit
-    st = status
+    st = status -sb
     co = checkout
     # verbose branch details
     br = branch -v
