@@ -62,4 +62,4 @@ ln -s "/Applications/MAMP/Library/bin/mysqldump" /usr/local/bin/mysqldump
 
 # netz98 magerun CLI tools
 wget https://raw.github.com/netz98/n98-magerun/master/n98-magerun.phar -o /usr/local/bin/n98-magerun.phar
-chmod +x  /usr/local/n98-magerun.phar
+chmod +x  /usr/local/bin/n98-magerun.phar
