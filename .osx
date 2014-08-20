@@ -52,7 +52,7 @@ ln -s "~/Dropbox/Backup/Sublime Text 3/Packages" "~/Library/Application Support/
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 # Add phpmamp to cmd line
-ln -s "/Applications/MAMP/bin/php/php5.5.3/bin/php" /usr/local/bin/phpmamp
+ln -s "/Applications/MAMP/bin/php/php5.5.10/bin/php" /usr/local/bin/phpmamp
 
 # Add mysql to cmd line
 ln -s "/Applications/MAMP/Library/bin/mysql" /usr/local/bin/mysql
