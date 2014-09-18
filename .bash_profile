@@ -18,3 +18,7 @@ fi
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+if [ -f ~/.n98-magerun.phar ]; then
+    . ~/.n98-magerun.phar
+fi
