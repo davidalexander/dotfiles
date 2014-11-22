@@ -23,9 +23,6 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
-# Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
-
 # Hide the Spotlight Menu Icon in OS X
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 killall SystemUIServer
@@ -35,9 +32,6 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable local Time Machine backups
 hash tmutil &> /dev/null && sudo tmutil disablelocal
-
-# Add iOS Simulator to Launchpad
-ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Applications/iOS\ Simulator.app
 
 # Add ssh config from dropbox
 ln -s "~/Dropbox/Backup/ssh/config" "~/.ssh/config"
