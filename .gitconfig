@@ -8,6 +8,7 @@
     editor = subl -n -w
     excludesfile = ~/.gitignore_global
     ignorecase = false
+    fileMode = false
 
 [receive]
      # denyCurrentBranch = warn # allow pushing, just warn
