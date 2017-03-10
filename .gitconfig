@@ -49,6 +49,9 @@
     # http://stackoverflow.com/a/10693888/11543
     branch-by-date = for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short) %(committerdate:short) %(authorname)'
 
+    # http://stackoverflow.com/a/2514279
+    branch-by-dates = for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r
+
 [apply]
     whitespace = warn
 
