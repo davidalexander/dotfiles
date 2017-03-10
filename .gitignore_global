@@ -29,6 +29,7 @@
 # IDE project files #
 #####################
 .idea/*
+.phpstorm.meta.php
 
 # Node dependencies/tasks #
 ###########################
