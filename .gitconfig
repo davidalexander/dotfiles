@@ -103,3 +103,6 @@
 
 [rerere]
     enabled = true
+
+[commit]
+    template = ~/.git-commit-template
