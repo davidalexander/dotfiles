@@ -5,7 +5,8 @@ parse_git_branch() {
 PS1="\[\e[01;31m\]\w \$(parse_git_branch): \[\e[00m\]"
 
 # custom listing shortcut (alias)
-alias ll='ls -AlhFG'
+alias ll='ls --almost-all --human-readable --classify --color -l'
+alias lt='ls --almost-all --human-readable --classify --color -lt --reverse'
 
 # Disk usage human readable and sorted by size.
 # Source: http://www.earthinfo.org/linux-disk-usage-sorted-by-size-and-human-readable/
@@ -22,3 +23,7 @@ fi
 if [ -f ~/.n98-magerun.phar ]; then
     . ~/.n98-magerun.phar
 fi
+
+# Set VI as default editor
+#export VISUAL=vi
+#export EDITOR="$VISUAL"
