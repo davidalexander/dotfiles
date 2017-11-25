@@ -8,3 +8,7 @@ function parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1)/"
 }
 export PS1="\[$GREEN\]\u \[$RESET\]\[$ITALIC\]in \[$RESET\]\[$BLUE\]\w\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \[$RESET\]\[$ITALIC\]on \")\[$YELLOW\]\$(parse_git_branch)\[$RESET\]\n» "
+
+# custom listing shortcut (alias)
+alias ll='ls --almost-all --human-readable --classify --color -l'
+alias lt='ls --almost-all --human-readable --classify --color -lt --reverse'
