@@ -9,9 +9,9 @@ function parse_git_branch() {
 }
 export PS1="\[$GREEN\]\u \[$RESET\]\[$ITALIC\]in \[$RESET\]\[$BLUE\]\w\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \[$RESET\]\[$ITALIC\]on \")\[$YELLOW\]\$(parse_git_branch)\[$RESET\]\n» "
 
-# custom listing shortcut (alias)
-alias ll='ls --almost-all --human-readable --classify --color -l'
-alias lt='ls --almost-all --human-readable --classify --color -lt --reverse'
+# custom listing shortcut (alias for mac osx format)
+alias ll='ls -GAhFl'
+alias lt='ls -GAhFltr'
 
 # Disk usage human readable and sorted by size.
 # Source: http://www.earthinfo.org/linux-disk-usage-sorted-by-size-and-human-readable/
