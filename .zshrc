@@ -33,6 +33,7 @@ alias cat='bat'
 
 # -----------------------------------------------
 # For NVM (Node version manager)
+# https://manuals.gravitydept.com/workspace/mac-apps/zsh
 # -----------------------------------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
