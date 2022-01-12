@@ -1,12 +1,21 @@
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Automatic update without confirmation prompt:
+# https://github.com/ohmyzsh/ohmyzsh#getting-updates
+zstyle ':omz:update' mode auto
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/david/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="pmcgee"
+ZSH_THEME="cobalt2"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -25,6 +34,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias zshconfig="code ~/.zshrc"
+alias zsource="source ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias ll='ls -GAhFl'
 alias lt='ls -GAhFltr'
@@ -33,7 +43,6 @@ alias cat='bat'
 
 # -----------------------------------------------
 # For NVM (Node version manager)
-# https://manuals.gravitydept.com/workspace/mac-apps/zsh
 # -----------------------------------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -69,3 +78,8 @@ bindkey -s "^[OX" "="
 # For Yarn
 # -----------------------------------------------
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
