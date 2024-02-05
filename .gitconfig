@@ -107,5 +107,9 @@
 [commit]
     template = ~/.git-commit-template
 
+[init]
+    defaultBranch = main
+
 [pull]
-    rebase = false
+    rebase = true
+    ff = only
