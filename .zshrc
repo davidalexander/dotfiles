@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -13,6 +11,13 @@ fi
 # Automatic update without confirmation prompt:
 # https://github.com/ohmyzsh/ohmyzsh#getting-updates
 zstyle ':omz:update' mode auto
+
+# Download Znap, if it's not there yet.
+[[ -r ~/Sites/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/Sites/znap
+source ~/Sites/znap/znap.zsh  # Start Znap
+znap source marlonrichert/zsh-autocomplete
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/david/.oh-my-zsh"
@@ -92,9 +97,6 @@ eval "$(pyenv init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 # Warning: Homebrew's "sbin" was not found in your PATH but you have installed
 # formulae that put executables in /usr/local/sbin.
