@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -30,7 +30,7 @@ export ZSH="/Users/david/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -104,7 +104,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # eval "$(pyenv init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Warning: Homebrew's "sbin" was not found in your PATH but you have installed
 # formulae that put executables in /usr/local/sbin.
@@ -112,3 +112,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 #   echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.zshrc
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
+
+# https://starship.rs/
+eval "$(starship init zsh)"
